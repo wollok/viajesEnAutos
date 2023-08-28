@@ -1,0 +1,27 @@
+import clientes.*
+import remiseras.*
+
+test "ludmila paga 18" {
+
+	assert.equals(18,ludmila.precioPorKm())
+	
+}
+
+test "ana maria paga 25 cuando esta economicamente inestable" {
+	
+	anaMaria.economicamenteEstable(false)
+	assert.equals(25,anaMaria.precioPorKm())
+}
+
+test "maria paga 30 cuando esta economicamente estable"{
+	assert.equals(30,anaMaria.precioPorKm())
+}
+
+test "ana maria inicialmente esta economicamente estable" {
+	assert.that(anaMaria.economicamenteEstable())
+}
+
+test "lucia cuando reemplaza a otra remisera, cobra lo mismo que ella" {
+	lucia.reemplazaA(juana)
+	assert.equals(200, lucia.precioViaje(ludmila, 10)  )	
+}

@@ -1,0 +1,12 @@
+import clientes.*
+import remiseras.*
+
+test "Lucia reemplaza a Mariela " {
+    lucia.reemplazaA(mariela)
+	assert.equals(180,lucia.precioViaje(ludmila,10))
+}
+
+test "Melina trabaja para Ludmila" {
+    melina.trabajaPara(ludmila)
+	assert.equals(180,gabriela.precioViaje(melina,10))
+}
